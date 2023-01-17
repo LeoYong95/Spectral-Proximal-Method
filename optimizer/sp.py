@@ -31,14 +31,14 @@ class SP(Optimizer):
 
         Example:
         >>> import optimizer as optim
-        >>> optimizer = optim.SP(model.parameters(), lr = 1.0)
+        >>> optimizer = optim.SP(model.parameters(), lr = 1.0, sigma = 0.1, momentum = 0.9, sparsity = True, nesterov = true)
         >>> optimizer.zero_grad()
         >>> loss_fn(model(input), target).backward(create_graph=True)
         >>> optimizer.step()
 
         Note:
             Reference code: https://github.com/jettify/pytorch-optimizer.git
-            Paper: https://ieeexplore.ieee.org/document/9377294
+            Paper: https://doi.org/10.22541/au.167350875.57067000/v1
     """
 
     def __init__(
